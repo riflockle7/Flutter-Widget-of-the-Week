@@ -4,6 +4,7 @@ import '2018/1_safeArea.dart';
 import '2018/2_expanded.dart';
 import '2018/3_wrap.dart';
 import '2018/4_animated_container.dart';
+import '2018/5_opacity.dart';
 
 void main() {
   runApp(const MyApp());
@@ -85,6 +86,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("AnimatedContainer")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OpacityScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Opacity")),
           ],
         ),
       ),
