@@ -49,6 +49,7 @@ class ExpandedScreen extends StatelessWidget {
   ///
   /// @see [https://stackoverflow.com/questions/45669202/how-to-add-a-listview-to-a-column-in-flutter]
   /// @see [https://www.youtube.com/watch?v=ZpHuAbYWL3w]
+  /// @see [https://codekodo.tistory.com/97]
   ///
   @override
   Widget build(BuildContext context) {
