@@ -64,6 +64,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("Expanded")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const WrapScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Wrap")),
           ],
         ),
       ),
