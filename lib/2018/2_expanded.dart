@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Expanded
+/// [Expanded]
 ///
 /// 열과 행 또는 Flex 위젯 내에서, 하나의 자식 위젯만을 "확장"시킬 수 있는 위젯
 /// (반응형 어플리케이션을 만들기 위해 사용하는 위젯)

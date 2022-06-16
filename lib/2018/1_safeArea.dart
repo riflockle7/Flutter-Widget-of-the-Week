@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// SafeArea
+/// [SafeArea]
 ///
 /// 운영 체제의 침입을 피하기 위해 충분한 패딩으로 자식을 삽입하는 위젯
 /// (ex. 화면 상단의 상태 표시줄을 피할 수 있을 만큼, iPhone X의 Notch 또는 디스플레이의 기타 유사한 창의적 물리적 기능을 피할 수 있을 만큼 child 를 들여씀)
