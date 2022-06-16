@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '2018/1_safeArea.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -40,7 +42,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text("SafeArea")
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SafeAreaScreen(),
+                    ),
+                  );
+                },
+                child: const Text("SafeArea"))
           ],
         ),
       ),
