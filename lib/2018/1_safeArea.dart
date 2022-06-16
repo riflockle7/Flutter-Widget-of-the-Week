@@ -8,7 +8,9 @@ import 'package:flutter/material.dart';
 /// MediaQuery 로 화면과 가장자리의 면적을 측정한 후 앱의 화면을 알맞게 맞추어 줌
 /// iOS 와 안드로이드 환경에서 콘텐츠를 보호해줌
 ///
-/// @see https://api.flutter.dev/flutter/widgets/SafeArea-class.html
+/// @see [https://youtu.be/lkF0TQJO0bA]
+/// @see [https://api.flutter.dev/flutter/widgets/SafeArea-class.html]
+/// @see [https://islet4you.tistory.com/entry/Flutter-SafeArea-%EC%84%A4%EB%AA%85]
 ///
 /// 전체화면을 잡아야 하는 경우엔 무조건 써야할듯
 /// 그런데 효과는 음.., 솔직히 말해서 잘 모르겠음
