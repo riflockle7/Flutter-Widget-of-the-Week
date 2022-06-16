@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_of_the_week/2018/2_expanded.dart';
 
 import '2018/1_safeArea.dart';
 
@@ -51,7 +52,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   );
                 },
-                child: const Text("SafeArea"))
+                child: const Text("SafeArea")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ExpandedScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Expanded")),
           ],
         ),
       ),
