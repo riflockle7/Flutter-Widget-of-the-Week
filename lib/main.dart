@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '2018/1_safeArea.dart';
 import '2018/2_expanded.dart';
 import '2018/3_wrap.dart';
+import '2018/4_animated_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -74,6 +75,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("Wrap")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AnimatedContainerScreen(),
+                    ),
+                  );
+                },
+                child: const Text("AnimatedContainer")),
           ],
         ),
       ),
