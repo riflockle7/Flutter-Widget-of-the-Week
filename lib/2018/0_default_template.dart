@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// [명세]
 ///
 /// @see [youtube_link]
-/// @see [define_link]
+/// @see [https://api.flutter.dev/flutter/widgets/_____-class.html]
 /// @see [other_link]
 ///
 /// [느낀점]
