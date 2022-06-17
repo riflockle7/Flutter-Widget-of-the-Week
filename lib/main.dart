@@ -5,6 +5,7 @@ import '2018/2_expanded.dart';
 import '2018/3_wrap.dart';
 import '2018/4_animated_container.dart';
 import '2018/5_opacity.dart';
+import '2018/6_future_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -96,6 +97,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("Opacity")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FutureBuilderScreen(),
+                    ),
+                  );
+                },
+                child: const Text("FutureBuilder")),
           ],
         ),
       ),
