@@ -47,8 +47,10 @@ class ExpandedScreen extends StatelessWidget {
   ///   (만약 자식 위젯에 Flex 또는 Expanded 를 설정하면 상호 베타적이므로 사용하지 말 것 - 알아서 에러 발생함)
   /// - 정적으로 모든 child 들을 그리므로 성능이 약간 떨어짐
   ///
-  /// @see [https://stackoverflow.com/questions/45669202/how-to-add-a-listview-to-a-column-in-flutter]
   /// @see [https://www.youtube.com/watch?v=ZpHuAbYWL3w]
+  /// @see [https://api.flutter.dev/flutter/widgets/ListView-class.html]
+  /// @see [https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html]
+  /// @see [https://stackoverflow.com/questions/45669202/how-to-add-a-listview-to-a-column-in-flutter]
   /// @see [https://codekodo.tistory.com/97]
   ///
   @override
