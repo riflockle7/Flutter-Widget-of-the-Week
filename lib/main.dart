@@ -6,6 +6,7 @@ import '2018/3_wrap.dart';
 import '2018/4_animated_container.dart';
 import '2018/5_opacity.dart';
 import '2018/6_future_builder.dart';
+import '2018/7_fade_transition.dart';
 
 void main() {
   runApp(const MyApp());
@@ -107,6 +108,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("FutureBuilder")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FadeTransitionScreen(),
+                    ),
+                  );
+                },
+                child: const Text("FadeTransition")),
           ],
         ),
       ),
