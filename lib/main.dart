@@ -8,6 +8,7 @@ import '2018/5_opacity.dart';
 import '2018/6_future_builder.dart';
 import '2018/7_fade_transition.dart';
 import '2018/8_floating_action_button.dart';
+import '2018/9_page_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -129,6 +130,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("FloatingActionButton")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PageViewScreen(),
+                    ),
+                  );
+                },
+                child: const Text("PageView")),
           ],
         ),
       ),
