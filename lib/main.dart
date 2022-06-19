@@ -9,6 +9,7 @@ import '2018/0006_future_builder.dart';
 import '2018/0007_fade_transition.dart';
 import '2018/0008_floating_action_button.dart';
 import '2018/0009_page_view.dart';
+import '2018/0010_table.dart';
 
 void main() {
   runApp(const MyApp());
@@ -140,6 +141,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("PageView")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TableScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Table")),
           ],
         ),
       ),
