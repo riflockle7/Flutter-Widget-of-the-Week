@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_of_the_week/2018/0012_sliver_list_grid.dart';
 
 import '2018/0001_safeArea.dart';
 import '2018/0002_expanded.dart';
@@ -162,6 +163,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("SliverAppBar")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SliverListGridScreen(),
+                    ),
+                  );
+                },
+                child: const Text("SliverListGrid")),
           ],
         ),
       ),

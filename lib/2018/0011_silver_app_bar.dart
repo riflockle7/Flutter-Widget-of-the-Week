@@ -41,7 +41,7 @@ class _SliverAppBarWidgetState extends State<SliverAppBarScreen> {
   /// floating 이 false 일 경우엔 활성화될 수 없는 것으로 보임
   bool _snap = false;
 
-  ///
+  /// 앱바가 가려졌다가 보여졌다가 하는지 여부
   bool _floating = false;
 
   /// [SliverAppBar]는 일반적으로
