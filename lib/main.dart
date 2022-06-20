@@ -14,6 +14,7 @@ import '2018/0010_table.dart';
 import '2018/0011_silver_app_bar.dart';
 import '2018/0013_fade_in_image.dart';
 import '2018/0014_stream_builder.dart';
+import '2018/0015_inherited_model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -194,6 +195,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("StreamBuilder")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const InheritModelScreen(),
+                    ),
+                  );
+                },
+                child: const Text("InheritModel")),
           ],
         ),
       ),
