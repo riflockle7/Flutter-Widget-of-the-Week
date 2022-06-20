@@ -12,6 +12,7 @@ import '2018/0008_floating_action_button.dart';
 import '2018/0009_page_view.dart';
 import '2018/0010_table.dart';
 import '2018/0011_silver_app_bar.dart';
+import '2018/0013_fade_in_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -173,6 +174,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("SliverListGrid")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FadeInImageScreen(),
+                    ),
+                  );
+                },
+                child: const Text("FadeInImage")),
           ],
         ),
       ),
