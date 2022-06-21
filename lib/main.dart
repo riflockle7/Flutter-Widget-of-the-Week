@@ -20,6 +20,7 @@ import '2018/0017_hero.dart';
 import '2018/0018_custom_paint.dart';
 import '2018/0019_tool_tip.dart';
 import '2019/0020_fitted_box.dart';
+import '2019/0021_layout_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -260,6 +261,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("FittedBox")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LayoutBuilderScreen(),
+                    ),
+                  );
+                },
+                child: const Text("LayoutBuilder")),
           ],
         ),
       ),
