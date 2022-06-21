@@ -26,9 +26,10 @@ import 'package:flutter/material.dart';
 /// @see [https://www.youtube.com/watch?v=8kWnpn0AHmo]
 ///
 /// 상태 관리 성능을 위해 사용되는 위젯으로 보임
-/// 알게 모르게 사용하는 위젯은 모두 [InheritedModel]
+/// 알게 모르게 사용하는 위젯은 모두 [InheritedWidget]
 /// ex. Scaffold 위젯, Theme 위젯, FocusScope 위젯
 ///
+/// 아래 예제는 [InheritedModel] 에 정의된 내용에 따라 부분 reBuild 를 하도록 만든 예제
 ///
 class InheritModelScreen extends StatefulWidget {
   const InheritModelScreen({Key? key}) : super(key: key);
@@ -39,8 +40,6 @@ class InheritModelScreen extends StatefulWidget {
   }
 }
 
-/// WidgetA, WidgetB, WidgetC 는 모두 독립적
-///
 class InheritModelState extends State<InheritModelScreen> {
   Color _colorOne = Colors.primaries[Random().nextInt(Colors.primaries.length)];
   Color _colorTwo = Colors.primaries[Random().nextInt(Colors.primaries.length)];
@@ -99,6 +98,7 @@ class InheritModelState extends State<InheritModelScreen> {
   }
 }
 
+/// @see [https://velog.io/@knh4300/StateManagement#inheritedwidget]
 class AncestorWidget extends InheritedModel<String> {
   const AncestorWidget(this.colorOne, this.colorTwo, Widget child, {Key? key})
       : super(key: key, child: child);
@@ -106,15 +106,22 @@ class AncestorWidget extends InheritedModel<String> {
   final Color colorOne;
   final Color colorTwo;
 
+  /// 하위 Widget 에서 최상단 Widget(여기에서는 [AncestorWidget]) 정보를 알 수 있도록 함
   static AncestorWidget of(BuildContext context, String aspect) {
     return InheritedModel.inheritFrom<AncestorWidget>(context, aspect: aspect)!;
   }
 
+  /// 하위 Widget 에서 해당 [InheritedModel] 정보를 알 수 있도록 함
+  ///
+  /// [InheritedWidget] 이 어떠한 이유로 인해 update 되었을 때 (= setState 호출했을때?),
+  /// 이 [InheritedWidget] 에 의존하는 [Widget] 을 rebuild 할 지 결정하는 함수
+  // (위젯들에게 변경 내용을 노티해야 하는지...)
   @override
   bool updateShouldNotify(covariant AncestorWidget oldWidget) {
     return colorOne != oldWidget.colorOne || colorTwo != oldWidget.colorTwo;
   }
 
+  /// [updateShouldNotify] 와 기능은 같지만, 각 위젯별로 조건문을 줄 수 있음
   @override
   bool updateShouldNotifyDependent(
       covariant AncestorWidget oldWidget, Set<String> dependencies) {
@@ -130,6 +137,7 @@ class AncestorWidget extends InheritedModel<String> {
   }
 }
 
+/// 상단 위젯
 class DependentWidgetOne extends StatelessWidget {
   const DependentWidgetOne({Key? key}) : super(key: key);
 
@@ -155,6 +163,7 @@ class DependentWidgetOne extends StatelessWidget {
   }
 }
 
+/// 하단 위젯
 class DependentWidgetTwo extends StatelessWidget {
   const DependentWidgetTwo({Key? key}) : super(key: key);
 
