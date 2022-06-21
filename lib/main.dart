@@ -16,6 +16,7 @@ import '2018/0013_fade_in_image.dart';
 import '2018/0014_stream_builder.dart';
 import '2018/0015_inherited_model.dart';
 import '2018/0016_clip_r_rect.dart';
+import '2018/0017_hero.dart';
 
 void main() {
   runApp(const MyApp());
@@ -216,6 +217,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("ClipRRect")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HeroScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Hero")),
           ],
         ),
       ),
