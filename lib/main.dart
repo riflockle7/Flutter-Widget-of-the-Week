@@ -19,6 +19,7 @@ import '2018/0016_clip_r_rect.dart';
 import '2018/0017_hero.dart';
 import '2018/0018_custom_paint.dart';
 import '2018/0019_tool_tip.dart';
+import '2019/0020_fitted_box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -249,6 +250,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("Tooltip")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FittedBoxScreen(),
+                    ),
+                  );
+                },
+                child: const Text("FittedBox")),
           ],
         ),
       ),
