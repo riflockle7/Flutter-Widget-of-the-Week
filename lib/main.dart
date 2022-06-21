@@ -15,6 +15,7 @@ import '2018/0011_silver_app_bar.dart';
 import '2018/0013_fade_in_image.dart';
 import '2018/0014_stream_builder.dart';
 import '2018/0015_inherited_model.dart';
+import '2018/0016_clip_r_rect.dart';
 
 void main() {
   runApp(const MyApp());
@@ -205,6 +206,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("InheritModel")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ClipRRectScreen(),
+                    ),
+                  );
+                },
+                child: const Text("ClipRRect")),
           ],
         ),
       ),
