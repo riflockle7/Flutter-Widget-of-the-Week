@@ -17,6 +17,7 @@ import '2018/0014_stream_builder.dart';
 import '2018/0015_inherited_model.dart';
 import '2018/0016_clip_r_rect.dart';
 import '2018/0017_hero.dart';
+import '2018/0018_custom_paint.dart';
 
 void main() {
   runApp(const MyApp());
@@ -227,6 +228,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("Hero")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CustomPaintScreen(),
+                    ),
+                  );
+                },
+                child: const Text("CustomPaint")),
           ],
         ),
       ),
