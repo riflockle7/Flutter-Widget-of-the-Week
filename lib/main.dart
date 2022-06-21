@@ -21,6 +21,7 @@ import '2018/0018_custom_paint.dart';
 import '2018/0019_tool_tip.dart';
 import '2019/0020_fitted_box.dart';
 import '2019/0021_layout_builder.dart';
+import '2019/0022_absorb_pointer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -271,6 +272,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("LayoutBuilder")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AbsorbPointerScreen(),
+                    ),
+                  );
+                },
+                child: const Text("AbsorbPointer")),
           ],
         ),
       ),
