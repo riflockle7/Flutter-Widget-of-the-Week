@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-/// [제목]
+/// [DefaultTemplate]
 ///
 /// [명세]
 ///
 /// @see [youtube_link]
-/// @see [https://api.flutter.dev/flutter/widgets/_____-class.html]
+/// @see [https://api.flutter.dev/flutter/widgets/DefaultTemplate-class.html]
 /// @see [other_link]
 ///
 /// [느낀점]
@@ -17,7 +17,7 @@ class DefaultTemplateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('[제목]'),
+        title: const Text('DefaultTemplate'),
       ),
       body: const Text(""),
     );
