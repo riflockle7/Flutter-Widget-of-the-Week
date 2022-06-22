@@ -23,6 +23,7 @@ import '2019/0020_fitted_box.dart';
 import '2019/0021_layout_builder.dart';
 import '2019/0022_absorb_pointer.dart';
 import '2019/0023_transform.dart';
+import '2019/0024_backdrop_filter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -293,6 +294,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("Transform")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const BackdropFilterScreen(),
+                    ),
+                  );
+                },
+                child: const Text("BackdropFilter")),
           ],
         ),
       ),
