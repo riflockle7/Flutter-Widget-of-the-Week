@@ -24,6 +24,7 @@ import '2019/0021_layout_builder.dart';
 import '2019/0022_absorb_pointer.dart';
 import '2019/0023_transform.dart';
 import '2019/0024_backdrop_filter.dart';
+import '2019/0025_align.dart';
 
 void main() {
   runApp(const MyApp());
@@ -303,7 +304,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   );
                 },
-                child: const Text("BackdropFilter")),
+                child: const Text("BackDropFilter")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AlignScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Align")),
           ],
         ),
       ),
